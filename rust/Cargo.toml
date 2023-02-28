@@ -1,0 +1,14 @@
+[package]
+name = "leptos-counter"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+leptos = { git = "https://github.com/leptos-rs/leptos" }
+console_log = "0.2"
+log = "0.4"
+console_error_panic_hook = "0.1.7"
+wasm-bindgen = "0.2.58"

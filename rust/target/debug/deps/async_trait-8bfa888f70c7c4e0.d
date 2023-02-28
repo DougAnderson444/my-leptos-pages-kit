@@ -1,0 +1,11 @@
+c:\Users\douga\Documents2\code\my-leptos-pages-kit\rust\target\debug\deps\async_trait-8bfa888f70c7c4e0.dll: C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\lib.rs C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\args.rs C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\bound.rs C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\expand.rs C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\lifetime.rs C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\parse.rs C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\receiver.rs
+
+c:\Users\douga\Documents2\code\my-leptos-pages-kit\rust\target\debug\deps\async_trait-8bfa888f70c7c4e0.d: C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\lib.rs C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\args.rs C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\bound.rs C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\expand.rs C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\lifetime.rs C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\parse.rs C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\receiver.rs
+
+C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\lib.rs:
+C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\args.rs:
+C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\bound.rs:
+C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\expand.rs:
+C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\lifetime.rs:
+C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\parse.rs:
+C:\Users\douga\.cargo\registry\src\github.com-1ecc6299db9ec823\async-trait-0.1.64\src\receiver.rs:

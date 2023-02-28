@@ -1,0 +1,12 @@
+C:\Users\douga\Documents2\code\my-leptos-pages-kit\rust\target\wasm32-unknown-unknown\debug\deps\leptos-2bdd867cfdb9f226.rmeta: C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\lib.rs C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\error_boundary.rs C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\for_loop.rs C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\show.rs C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\suspense.rs C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\transition.rs
+
+C:\Users\douga\Documents2\code\my-leptos-pages-kit\rust\target\wasm32-unknown-unknown\debug\deps\libleptos-2bdd867cfdb9f226.rlib: C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\lib.rs C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\error_boundary.rs C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\for_loop.rs C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\show.rs C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\suspense.rs C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\transition.rs
+
+C:\Users\douga\Documents2\code\my-leptos-pages-kit\rust\target\wasm32-unknown-unknown\debug\deps\leptos-2bdd867cfdb9f226.d: C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\lib.rs C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\error_boundary.rs C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\for_loop.rs C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\show.rs C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\suspense.rs C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\transition.rs
+
+C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\lib.rs:
+C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\error_boundary.rs:
+C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\for_loop.rs:
+C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\show.rs:
+C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\suspense.rs:
+C:\Users\douga\.cargo\git\checkouts\leptos-2c8932a5258b3db6\b153ab5\leptos\src\transition.rs:
