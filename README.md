@@ -1,6 +1,6 @@
 # Deploy Leptos Github/Cloudflare Pages (Svelte)Kit
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+A web app powered by Leptos, bundled by Vite, and adapted by Sveltekit.
 
 ## Start with Sveltekit
 
@@ -215,3 +215,7 @@ module.exports = {
 Vite would watch our `.js` files but we need Tailwindcss to watch our `.rs` files via the config, so instead of relying on Vite, let's watch using:
 
 `npx tailwindcss -i ./input.css -o ./style/output.css --watch`
+
+## Dev notes
+
+As of right now, `vite dev` [does not work](https://github.com/wasm-tool/rollup-plugin-rust/issues/36) with `rollup-plugin-rust`
