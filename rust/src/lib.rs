@@ -13,18 +13,19 @@ pub fn SimpleCounter(
     step: i32,
 ) -> impl IntoView {
     let (value, set_value) = create_signal(cx, initial_value);
+    let base: &str = env!("BASE_PATH");
 
     view! { cx,
         <div class="flex items-center">
             <button on:click=move |_| set_value(0) class="border rounded bg-red-500 text-white p-2 m-2">"X"</button>
             <button on:click=move |_| set_value.update(|value| *value -= step)>
                 <div class="w-16 h-auto p-1 m-1">
-                    <img src="./decrease.png" width="100%" />
+                    <img src={base.to_owned() + "decrease.png"} width="100%" />
                 </div>
             </button>
             <span>"Value: " {value} "!"</span>
             <button on:click=move |_| set_value.update(|value| *value += step)>
-                <img src="./increase.png" class="w-16 h-auto p-1 m-1" width="100%" />
+                <img src={base.to_owned() + "increase.png"} class="w-16 h-auto p-1 m-1" width="100%" />
             </button>
         </div>
     }
