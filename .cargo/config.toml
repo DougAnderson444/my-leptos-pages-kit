@@ -1,0 +1,2 @@
+[env]
+BASE_PATH = "/my-leptos-pages-kit/"  # Github pages base path, rx: let path: &'static str = env!("PATH");
