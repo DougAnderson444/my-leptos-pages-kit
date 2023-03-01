@@ -10,7 +10,7 @@ export default defineConfig({
 		}),
 		sveltekit()
 	],
-	optimizeDeps: { exclude: ['./rust/*'] }, // doesnt exclude ryst/Cargo.toml from ssrTrnsformation
-	ssr: { external: ['./rust/*'] }, // doesnt exclude ryst/Cargo.toml from ssrTrnsformation
+	optimizeDeps: { exclude: ['./rust/*'] }, // doesnt work, does not exclude ./rust/Cargo.toml from ssrTransformation
+	ssr: { external: ['./rust/*'] }, // doesnt work, does not exclude ./rust/Cargo.toml from ssrTransformation
 	server: { fs: { strict: false } }
 });
