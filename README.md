@@ -1,4 +1,4 @@
-# Deploy Leptos Github/Cloudflare Pages (Svelte)Kit
+# Deploy Leptos Github/Cloudflare Pages via (Svelte)Kit
 
 A web app powered by Leptos, bundled by Vite, and adapted by Sveltekit.
 
@@ -10,7 +10,7 @@ Yep... but the way Cloudflare deploys Pages is using Workers, which uses WebAsse
 
 Second, Sveltekit has already done a lot of the heavy lifting for us by having an adapter already built for Cloudflare Pages. This will save us time and headaches when deploying to Cloudflare.
 
-Third, as much as I love Svelte, there's actually very little Svelte or JS needed to initialize Wasm, so hardcore purists can rest easy ;)
+Third, we get the benefits of a PWA with a framework such as 'kit. That said, as much as I love Svelte, there's actually very little Svelte or JS needed to initialize Wasm, so hardcore purists can rest easy ;)
 
 ### Create Svelte App
 
