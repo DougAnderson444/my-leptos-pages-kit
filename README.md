@@ -189,7 +189,6 @@ We want to watch the css in the rust files, but have Sveltekit include the css i
 #### Add Tailwind to Sveltekit build pipeline
 
 To ensure our Cloudflare Leptos Page gets the css file, let's follow the standard Tailwind procedure [for adding it to Kit](https://tailwindcss.com/docs/guides/sveltekit) with some adjustments to watch and transform the rust files.
-`
 
 ```cli
 npm install -D tailwindcss postcss autoprefixer
