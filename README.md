@@ -153,9 +153,32 @@ Now if we `npm run build` the `wasm-tool` will bundle our Rust code up for us, a
 
 ## How cool is that?!
 
-Pretttty cool. But the min benefit of using Pages (instead of Workers) is we can have assets like a regular web page. So let's add some assets and see how that works.
+Pretttty cool. But the main benefit of using Pages (instead of Workers) is we can have _static assets_ like any regular web page. So let's add some assets and see how that works.
 
-What if we replace the words of "-1" and "+1" with some images, like `"/increase.png"` and `"/decrease.png"`?
+What if we replace the words of "-1" and "+1" with some **images**, like `"/increase.png"` and `"/decrease.png"`?
+
+Save a couple of images to `./static` directory and we have them available inour final app.
+
+For Github pages, our app will be located at `github.io/my-leptos-pages-kit` so we need to add this base path to our image path.
+
+Adding a `./.cargo/config.toml` enables us to configure a base path for Github pages
+
+```toml
+[env]
+BASE_PATH = "/my-leptos-pages-kit/"  # Github pages base path
+```
+
+So when we build for Github pages (not needed for Cloudflare Pages) we would reference our static assets like this:
+
+```rs
+// rust/src/lib.rs
+let base: &str = env!("BASE_PATH");
+
+// ... inside Leptos marco ... //
+
+<img src={base.to_owned() + "decrease.png"} width="100%" />
+
+```
 
 ### Add a Tailwindcss
 
@@ -216,6 +239,17 @@ Vite would watch our `.js` files but we need Tailwindcss to watch our `.rs` file
 
 `npx tailwindcss -i ./input.css -o ./style/output.css --watch`
 
+Now we can add some Tailwindcss classes to our Hybrid app:
+
+```js
+// rust/src/lib.rs
+<div class="w-16 h-auto p-1 m-1">
+	<img src={base.to_owned() + 'decrease.png'} width="100%" />
+</div>
+```
+
 ## Dev notes
 
-As of right now, `vite dev` [does not work](https://github.com/wasm-tool/rollup-plugin-rust/issues/36) with `rollup-plugin-rust`
+Run `npm run build` and `npm run preview` to watch it happen!
+
+TODO: Better dev setup. As of right now, `vite dev` [does not work](https://github.com/wasm-tool/rollup-plugin-rust/issues/36) with `rollup-plugin-rust`, so there's likely a better way to do development like how standard Leptos apps use Trunk. But for build and deployment, this pipeline works fine :)
