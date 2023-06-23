@@ -13,7 +13,7 @@ const tailwind = spawn('node', [
 	'./src/style/app.css',
 	'-o',
 	'./src/style/output.css',
-	'--watch'
+	dev ? '--watch' : ''
 ]);
 
 tailwind.stdout.on('data', (data) => {
