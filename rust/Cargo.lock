@@ -181,6 +181,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "counter"
+version = "0.1.0"
+dependencies = [
+ "console_error_panic_hook",
+ "console_log",
+ "leptos",
+ "log",
+ "wasm-bindgen",
+]
+
+[[package]]
 name = "cpufeatures"
 version = "0.2.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -538,17 +549,6 @@ dependencies = [
  "leptos_server",
  "tracing",
  "typed-builder",
-]
-
-[[package]]
-name = "leptos-counter"
-version = "0.1.0"
-dependencies = [
- "console_error_panic_hook",
- "console_log",
- "leptos",
- "log",
- "wasm-bindgen",
 ]
 
 [[package]]

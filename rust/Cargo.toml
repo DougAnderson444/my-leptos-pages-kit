@@ -1,5 +1,5 @@
 [package]
-name = "leptos-counter"
+name = "counter"
 version = "0.1.0"
 edition = "2021"
 
@@ -12,3 +12,18 @@ console_log = "0.2"
 log = "0.4"
 console_error_panic_hook = "0.1.7"
 wasm-bindgen = "0.2.58"
+
+[package.metadata.leptos]
+output-name = "counter"
+
+[profile.release]
+codegen-units = 1        # allow for maximum size reduction optimizations
+debug = false
+debug-assertions = false
+incremental = false
+lto = true               # Enable Link Time Optimization
+opt-level = 3            # Optimize for size
+overflow-checks = false
+panic = 'abort'          # Abort on panic
+rpath = false
+strip = true             # Automatically strip symbols from the binary.
