@@ -6,11 +6,14 @@ import { serverPath } from './svelte.config.js';
 export default defineConfig({
 	plugins: [
 		rust({
-			serverPath: serverPath + '/' // for github pages
+			serverPath: serverPath + '/', // for github pages
+			// Extra arguments passed to `cargo build`.
+			cargoArgs: [], // '--release' for smaller builds
+			// Extra arguments passed to `wasm-bindgen`.
+			wasmBindgenArgs: [],
+			watchPatterns: ['rust/src/**']
 		}),
 		sveltekit()
 	],
-	optimizeDeps: { exclude: ['./rust/*'] }, // doesnt work, does not exclude ./rust/Cargo.toml from ssrTransformation
-	ssr: { external: ['./rust/*'] }, // doesnt work, does not exclude ./rust/Cargo.toml from ssrTransformation
 	server: { fs: { strict: false } }
 });
