@@ -207,6 +207,21 @@ Use a script that will run Tailwindcss on our Rust files:
 
 `npx tailwindcss -i ./src/style/app.css -o ./src/style/output.css --watch`
 
+We can actually automate this too, by adding a bit of script to out svelte config:
+
+```js
+// svelte.config.js
+// spawm a nodejs command for `tailwindcss -i ./src/style/app.css -o ./src/style/output.css --watch`
+const tailwind = spawn('node', [
+	'./node_modules/tailwindcss/lib/cli.js',
+	'-i',
+	'./src/style/app.css',
+	'-o',
+	'./src/style/output.css',
+	'--watch'
+]);
+```
+
 Finally, add the css output to the Svelte Component, typically done via a default layout:
 
 ```svelte
@@ -249,6 +264,33 @@ Now we can add some Tailwindcss classes to our Hybrid app:
 
 ## Dev notes
 
-Run `npm run build` and `npm run preview` to watch it happen!
+Run `npm run dev` or `npm run build` and `npm run preview` to watch it happen!
 
-TODO: Better dev setup. As of right now, `vite dev` [does not work](https://github.com/wasm-tool/rollup-plugin-rust/issues/36) with `rollup-plugin-rust`, so there's likely a better way to do development like how standard Leptos apps use Trunk. But for build and deployment, this pipeline works fine :)
+### Speeding up dev with Trunk-rs?
+
+Copy css and static/images over in the trunk template
+
+```html
+<!-- ./rust/index.html -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<link data-trunk rel="css" href="../src/style/output.css" />
+		<link data-trunk rel="copy-dir" href="../static/images" />
+	</head>
+	<body></body>
+</html>
+```
+
+Tell Trunk to ALSO add the Github path to it's path
+
+```toml
+# ./rust/Trunk.toml
+[build]
+public_url = "/my-leptos-pages-kit/"
+```
+
+Now we can serve through Trunk:
+
+`npx tailwindcss -i ./src/style/app.css -o ./src/style/output.css --watch`
+`trunk serve --open`
