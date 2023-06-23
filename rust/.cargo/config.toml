@@ -3,4 +3,3 @@ BASE_PATH = "/my-leptos-pages-kit/" # Github pages base path, rx: let path: &'st
 
 [build]
 target = "wasm32-unknown-unknown" # for the browser
-profile = "release"               # for smaller builds
