@@ -1,46 +1,42 @@
-const l = [
-  "/my-leptos-pages-kit/_app/immutable/entry/app.a52b88d6.js",
-  "/my-leptos-pages-kit/_app/immutable/chunks/0.ed28e857.js",
-  "/my-leptos-pages-kit/_app/immutable/chunks/1.12528ef0.js",
-  "/my-leptos-pages-kit/_app/immutable/chunks/2.776194f6.js",
-  "/my-leptos-pages-kit/_app/immutable/chunks/_layout.da46b06b.js",
-  "/my-leptos-pages-kit/_app/immutable/chunks/index.f98f3a93.js",
-  "/my-leptos-pages-kit/_app/immutable/chunks/singletons.5ea2ee9b.js",
-  "/my-leptos-pages-kit/_app/immutable/assets/leptos_counter.7ab947cc.wasm",
-  "/my-leptos-pages-kit/_app/immutable/entry/start.1d8dce74.js",
-  "/my-leptos-pages-kit/_app/immutable/entry/error.svelte.632aa0bb.js",
-  "/my-leptos-pages-kit/_app/immutable/assets/_layout.177663e8.css",
-  "/my-leptos-pages-kit/_app/immutable/entry/_layout.js.984db11e.js",
-  "/my-leptos-pages-kit/_app/immutable/entry/_layout.svelte.a7647e36.js",
-  "/my-leptos-pages-kit/_app/immutable/entry/_page.svelte.2fb6d642.js"
-], i = [
-  "/my-leptos-pages-kit/.nojekyll",
-  "/my-leptos-pages-kit/decrease.png",
-  "/my-leptos-pages-kit/favicon.ico",
-  "/my-leptos-pages-kit/favicon.png",
-  "/my-leptos-pages-kit/increase.png"
-], o = "1677687904525", s = self, p = `static-cache-${o}`, n = l.concat(i);
-s.addEventListener("install", (e) => {
-  console.log("[ServiceWorker] Install"), e.waitUntil(
-    caches.open(p).then((t) => (console.log("[ServiceWorker] Pre-caching offline page"), t.addAll(n).then(() => {
-      s.skipWaiting();
+const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), i = [
+  e + "/_app/immutable/entry/app.8e637bab.js",
+  e + "/_app/immutable/assets/0.8211865c.css",
+  e + "/_app/immutable/nodes/0.e73190b0.js",
+  e + "/_app/immutable/nodes/1.1a28f6c7.js",
+  e + "/_app/immutable/nodes/2.8bf4c53d.js",
+  e + "/_app/immutable/chunks/index.7cf2deec.js",
+  e + "/_app/immutable/chunks/scheduler.e108d1fd.js",
+  e + "/_app/immutable/chunks/singletons.90c11950.js",
+  e + "/_app/immutable/assets/counter.7ce83abd.wasm",
+  e + "/_app/immutable/entry/start.f02aee03.js"
+], o = [
+  e + "/.nojekyll",
+  e + "/favicon.ico",
+  e + "/favicon.png",
+  e + "/images/decrease.png",
+  e + "/images/increase.png"
+], l = "1687534708768", t = self, n = `static-cache-${l}`, r = i.concat(o);
+t.addEventListener("install", (a) => {
+  console.log("[ServiceWorker] Install"), a.waitUntil(
+    caches.open(n).then((s) => (console.log("[ServiceWorker] Pre-caching offline page"), s.addAll(r).then(() => {
+      t.skipWaiting();
     })))
   );
 });
-s.addEventListener("activate", (e) => {
-  console.log("[ServiceWorker] Activate"), e.waitUntil(
+t.addEventListener("activate", (a) => {
+  console.log("[ServiceWorker] Activate"), a.waitUntil(
     caches.keys().then(
-      async (t) => Promise.all(
-        t.map((a) => {
-          if (a !== p)
-            return console.log("[ServiceWorker] Removing old cache", a), caches.delete(a);
+      async (s) => Promise.all(
+        s.map((c) => {
+          if (c !== n)
+            return console.log("[ServiceWorker] Removing old cache", c), caches.delete(c);
         })
       )
     )
-  ), s.clients.claim();
+  ), t.clients.claim();
 });
-self.addEventListener("fetch", (e) => {
-  console.log("[ServiceWorker] Fetch", e.request.url), e.request.mode === "navigate" && e.respondWith(
-    fetch(e.request).catch(() => caches.open(p).then((t) => t.match("offline.html")))
+self.addEventListener("fetch", (a) => {
+  console.log("[ServiceWorker] Fetch", a.request.url), a.request.mode === "navigate" && a.respondWith(
+    fetch(a.request).catch(() => caches.open(n).then((s) => s.match("offline.html")))
   );
 });

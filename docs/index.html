@@ -4,27 +4,30 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="/my-leptos-pages-kit/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content="">
-		<link rel="modulepreload" href="/my-leptos-pages-kit/_app/immutable/entry/start.1d8dce74.js">
-		<link rel="modulepreload" href="/my-leptos-pages-kit/_app/immutable/chunks/index.f98f3a93.js">
-		<link rel="modulepreload" href="/my-leptos-pages-kit/_app/immutable/chunks/singletons.5ea2ee9b.js">
-		<link rel="modulepreload" href="/my-leptos-pages-kit/_app/immutable/entry/app.a52b88d6.js">
+		
+		<link rel="modulepreload" href="/my-leptos-pages-kit/_app/immutable/entry/start.f02aee03.js">
+		<link rel="modulepreload" href="/my-leptos-pages-kit/_app/immutable/chunks/scheduler.e108d1fd.js">
+		<link rel="modulepreload" href="/my-leptos-pages-kit/_app/immutable/chunks/singletons.90c11950.js">
+		<link rel="modulepreload" href="/my-leptos-pages-kit/_app/immutable/entry/app.8e637bab.js">
+		<link rel="modulepreload" href="/my-leptos-pages-kit/_app/immutable/chunks/index.7cf2deec.js">
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
 			<script>
 				{
-					__sveltekit_7o5hn8 = {
-						env: {},
+					__sveltekit_lruk9 = {
 						assets: "/my-leptos-pages-kit",
-						element: document.currentScript.parentElement
+						base: "/my-leptos-pages-kit",
+						env: {}
 					};
 
+					const element = document.currentScript.parentElement;
+
 					Promise.all([
-						import("/my-leptos-pages-kit/_app/immutable/entry/start.1d8dce74.js"),
-						import("/my-leptos-pages-kit/_app/immutable/entry/app.a52b88d6.js")
+						import("/my-leptos-pages-kit/_app/immutable/entry/start.f02aee03.js"),
+						import("/my-leptos-pages-kit/_app/immutable/entry/app.8e637bab.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_7o5hn8.element);
+						kit.start(app, element);
 					});
 
 					if ('serviceWorker' in navigator) {
