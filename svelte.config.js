@@ -1,8 +1,35 @@
 // import adapter from '@sveltejs/adapter-cloudflare';
 import adapter from '@sveltejs/adapter-static'; // if no server side code, works for both github and cloudflare
 import { vitePreprocess } from '@sveltejs/kit/vite';
+import { spawn } from 'child_process';
 
 export const serverPath = '/my-leptos-pages-kit';
+const dev = process.argv.includes('dev');
+
+// spawm a nodejs command for `tailwindcss -i ./src/style/app.css -o ./src/style/output.css --watch`
+const tailwind = spawn('node', [
+	'./node_modules/tailwindcss/lib/cli.js',
+	'-i',
+	'./src/style/app.css',
+	'-o',
+	'./src/style/output.css',
+	'--watch'
+]);
+
+tailwind.stdout.on('data', (data) => {
+	console.log(`stdout: ${data}`);
+});
+tailwind.stderr.on('data', (data) => {
+	console.error(`stderr: ${data}`);
+});
+tailwind.on('close', (code) => {
+	console.log(`child process exited with code ${code}`);
+});
+
+// close tailwind process on exit
+process.on('exit', () => {
+	tailwind.kill();
+});
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
